@@ -1,0 +1,220 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+            
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* General setup */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+   display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem; 
+}
+
+.main section {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+article {
+    
+}
+
+.subsection {
+    display: flex;
+}
+
+aside {
+    grid-column: 2;
+    grid-row: 1;
+    border-left: 1px solid black;
+    padding-left: 1rem;
+}
+
+aside p {
+    border-bottom: 1px solid black;
+    margin-top: 0.5rem;
+}
+
+footer {
+    
+}
+
+nav {
+    
+}
+
+/* ---------- IMPORTED FONTS ---------- */
+
+@font-face {
+    font-family: robotoslab;
+    src: url("../fonts/serif/robotoslab-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url("../fonts/sans-serif/montserrat-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: ultra;
+    src: url("../fonts/serif/ultra-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+
+h1, h2, h3 {
+    font-family: robotoslab, "Georgia", sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    transform: rotate(-3deg);
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+p {
+    font-family: montserrat, "Arial", sans-serif;
+    font-size: 0.75rem;
+}
+
+.highlight { 
+    background-color:lightblue;
+    font-family: ultra;
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    letter-spacing: 0.25rem;
+    box-shadow: 0.25rem 0.25rem 0.125rem grey;
+}
+
+/* ---------- NAVIGATION MENU ---------- */
+
+nav {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* ---------- FIGURES AND IMAGES ---------- */
+
+figure {
+    
+}
+
+img {
+    width: 100%;
+}
+
+.article-image {
+    float: left;
+    padding-right: 0.5rem;
+    width: 30%;
+}
+
+.subsection figure{
+    margin: 0.25rem;
+}
+
+figcaption {
+    
+}
+
+/* ---------- LINKS ---------- */
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: lightcyan;
+    border-radius: 0.25rem;
+    outline-color: aqua;
+}
+
+.expand {
+    
+}
